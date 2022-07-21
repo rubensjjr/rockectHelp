@@ -14,6 +14,11 @@ export function SignIn() {
 
     const { colors } = useTheme();
 
+    function handleSignIn() {
+        console.log(name,password);
+        
+    }
+
     return (
         <VStack flex={1} alignItems="center" bg="gray.600" px={8} pt={24}>
             <Logo />
@@ -34,9 +39,9 @@ export function SignIn() {
                 secureTextEntry
                 onChangeText={setPassword}
             />
-            <Button title="Entrar" w="full" />
+            <Button title="Entrar" w="full" onPress={handleSignIn}/>
 
 
         </VStack>
     )
-}
+} 
